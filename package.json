@@ -1,0 +1,15 @@
+{
+  "name": "zolotia-wallet",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "mini-app",
+    "mock-api"
+  ],
+  "scripts": {
+    "dev:mini-app": "npm run dev -w mini-app",
+    "dev:mock-api": "npm run dev -w mock-api",
+    "build:mini-app": "npm run build -w mini-app",
+    "start": "npm run start -w mock-api"
+  }
+}

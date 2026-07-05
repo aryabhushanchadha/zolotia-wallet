@@ -1,0 +1,8 @@
+node_modules
+.env
+dist
+*.sqlite
+*.db
+mock-api/data
+.bin
+.DS_Store

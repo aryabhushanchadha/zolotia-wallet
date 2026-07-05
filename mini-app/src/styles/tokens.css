@@ -1,0 +1,66 @@
+:root {
+  /* Base surfaces — light, modern */
+  --z-bg: #faf9f6;
+  --z-surface: #ffffff;
+  --z-surface-raised: #ffffff;
+  --z-border: #ece7dd;
+
+  /* Gold system (primary brand) */
+  --z-gold-100: #fcebcb;
+  --z-gold-300: #f0c374;
+  --z-gold-500: #e9a93b;
+  --z-gold-700: #b87a1a;
+
+  /* Vibrant accent */
+  --z-violet-100: #ece7ff;
+  --z-violet-500: #7b61ff;
+  --z-violet-700: #5a3fd6;
+
+  /* Text */
+  --z-text-primary: #1c1a15;
+  --z-text-secondary: #6b6b63;
+  --z-text-muted: #a3a196;
+
+  /* Semantic */
+  --z-success: #22c55e;
+  --z-success-100: #e2f8ea;
+  --z-danger: #f04438;
+  --z-warning: #f5a623;
+  --z-info: #3b82f6;
+
+  /* Radii / elevation */
+  --z-radius-sm: 10px;
+  --z-radius-md: 16px;
+  --z-radius-lg: 24px;
+  --z-shadow-card: 0 4px 20px rgba(28, 26, 21, 0.08);
+  --z-shadow-gold: 0 8px 24px rgba(233, 169, 59, 0.28);
+}
+
+[data-theme='dark'] {
+  --z-bg: #131417;
+  --z-surface: #1c1e23;
+  --z-surface-raised: #23262c;
+  --z-border: #2e3138;
+
+  --z-gold-100: #3a2f1a;
+  --z-gold-300: #c99a4c;
+  --z-gold-500: #eab54a;
+  --z-gold-700: #f6cf82;
+
+  --z-violet-100: #2a2740;
+  --z-violet-500: #9482ff;
+  --z-violet-700: #b6aaff;
+
+  --z-text-primary: #f3f2ef;
+  --z-text-secondary: #9a9a9e;
+  --z-text-muted: #6b6c72;
+
+  --z-success: #34d399;
+  --z-success-100: #163429;
+  --z-danger: #f87171;
+  --z-warning: #fbbf24;
+  --z-info: #60a5fa;
+
+  --z-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --z-shadow-gold: 0 8px 24px rgba(234, 181, 74, 0.22);
+}
