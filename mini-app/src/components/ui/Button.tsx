@@ -10,7 +10,10 @@ const variantClasses: Record<Variant, string> = {
   danger: 'bg-danger text-white',
 };
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+type Props = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  'onAnimationStart' | 'onAnimationEnd' | 'onDrag' | 'onDragStart' | 'onDragEnd'
+> & {
   variant?: Variant;
   icon?: ReactNode;
   fullWidth?: boolean;

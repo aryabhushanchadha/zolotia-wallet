@@ -3,6 +3,7 @@ node_modules
 dist
 *.sqlite
 *.db
+*.tsbuildinfo
 mock-api/data
 .bin
 .DS_Store

@@ -30,13 +30,16 @@ export async function getTestnetTransactions(rawAddress: string, limit = 10): Pr
   const txs = await getClient().getTransactions(address, { limit });
   return txs.map((tx) => {
     const inMsg = tx.inMessage;
+    const outMsg = tx.outMessages.values()[0];
     const isIncoming = inMsg?.info.type === 'internal';
-    const amount =
-      isIncoming && inMsg?.info.type === 'internal'
-        ? inMsg.info.value.coins
-        : tx.outMessages.values()[0]?.info.type === 'internal'
-          ? tx.outMessages.values()[0].info.value.coins
-          : 0n;
+
+    let amount = 0n;
+    if (isIncoming && inMsg?.info.type === 'internal') {
+      amount = inMsg.info.value.coins;
+    } else if (outMsg?.info.type === 'internal') {
+      amount = outMsg.info.value.coins;
+    }
+
     return {
       id: tx.hash().toString('hex'),
       timestamp: tx.now * 1000,
