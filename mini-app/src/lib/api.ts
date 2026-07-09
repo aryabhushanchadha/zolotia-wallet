@@ -1,4 +1,8 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:4000';
+// In production, mini-app and mock-api are served from the same Render
+// service/origin, so relative paths work — VITE_API_BASE_URL is only needed
+// for local dev, where the Vite dev server (5173) and mock-api (4000) are
+// separate origins.
+const API_BASE = import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.DEV ? 'http://localhost:4000' : '');
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
